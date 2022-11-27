@@ -1,8 +1,5 @@
 #pragma semicolon 1
 
-#define PLUGIN_AUTHOR "Cloud Strife"
-#define PLUGIN_VERSION "1.0"
-
 #include <sourcemod>
 #include <sdktools>
 #include <dhooks>
@@ -12,9 +9,9 @@
 public Plugin myinfo = 
 {
 	name = "FixFuncRotating",
-	author = PLUGIN_AUTHOR,
+	author = "Cloud Strife",
 	description = "Fixes func_rotating`s StartForward and StopAtStartPos inputs",
-	version = PLUGIN_VERSION,
+	version = "1.0.0",
 	url = ""
 };
 
