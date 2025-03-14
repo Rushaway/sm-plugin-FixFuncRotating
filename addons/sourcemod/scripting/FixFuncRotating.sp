@@ -11,13 +11,14 @@ public Plugin myinfo =
 	name = "FixFuncRotating",
 	author = "Cloud Strife",
 	description = "Fixes func_rotating`s StartForward and StopAtStartPos inputs",
-	version = "1.0.0",
+	version = "1.0.1",
 	url = ""
 };
 
 Handle g_CFuncRotating_StartForward = null;
 Handle g_CFuncRotating_UpdateSpeed = null;
 
+#if SOURCEMOD_V_MAJOR >= 1 && SOURCEMOD_V_MINOR < 13
 stock float FloatMod(float num, float denom)
 {
     return num - denom * RoundToFloor(num / denom);
@@ -27,6 +28,7 @@ stock float operator%(float oper1, float oper2)
 {
     return FloatMod(oper1, oper2);
 }
+#endif
 
 // Set m_bStopAtStartPos to false
 public MRESReturn CFuncRotating_InputStartForward(int entity)
