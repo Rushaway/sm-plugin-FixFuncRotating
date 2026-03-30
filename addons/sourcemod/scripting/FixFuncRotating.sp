@@ -11,14 +11,14 @@ public Plugin myinfo =
 	name = "FixFuncRotating",
 	author = "Cloud Strife",
 	description = "Fixes func_rotating`s StartForward and StopAtStartPos inputs",
-	version = "1.0.1",
+	version = "1.0.2",
 	url = ""
 };
 
 Handle g_CFuncRotating_StartForward = null;
 Handle g_CFuncRotating_UpdateSpeed = null;
 
-#if SOURCEMOD_V_MAJOR >= 1 && SOURCEMOD_V_MINOR < 13
+#if SOURCEMOD_V_MAJOR >= 1 && SOURCEMOD_V_MINOR < 12
 stock float FloatMod(float num, float denom)
 {
     return num - denom * RoundToFloor(num / denom);
